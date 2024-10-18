@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  ssh.cyrhades.fr:
+    build: ssh
+  webssh.cyrhades.fr:
+    build: webssh
+    ports:
+    - ${PORT}:8888
+  never-skip-class-nor-squaring.cyrhades.fr:
+    image: anssi/fcsc2022-hardware-never-skip-class-nor-squaring:latest
+    ports:
+      - ${PORT_SSH}:4000
